@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import com.qa.app.base.BaseTest;
 import static com.qa.app.constants.AppConstants.*;
 
+import java.util.List;
+
 public class AccountsPageTest extends BaseTest {
 	
 	@BeforeClass
@@ -24,6 +26,12 @@ public class AccountsPageTest extends BaseTest {
 	public void loginPageURLTest() {
 		String actURL = accountsPage.getAccountPageURL();
 		Assert.assertTrue(actURL.contains(ACCOUNT_PAGE_FRACTION_URL));
+	}
+	
+	@Test
+	public void accountPageHeaderTest() {
+		List<String> actHeaderList = accountsPage.getAccountsPageHeaders();
+		Assert.assertEquals(actHeaderList, EXPECTED_HEADERS_LIST);
 	}
 
 }

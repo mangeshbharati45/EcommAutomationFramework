@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeTest;
 import com.qa.app.factory.DriverFactory;
 import com.qa.app.pages.AccountsPage;
 import com.qa.app.pages.LoginPage;
+import com.qa.app.pages.RegistrationPage;
+import com.qa.app.pages.SearchPage;
 
 public class BaseTest {
 
@@ -19,6 +21,8 @@ public class BaseTest {
 	
 	protected LoginPage loginPage;
 	protected AccountsPage accountsPage;
+	protected SearchPage searchPage;
+	protected RegistrationPage registrationPage;
 	
 	@BeforeTest
 	public void setup() {

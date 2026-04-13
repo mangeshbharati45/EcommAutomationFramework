@@ -47,10 +47,11 @@ public class LoginPage {
 		eleUtil.waitForElementVisible(email, MEDIUM_DEFAULT_TIMEOUT).sendKeys(username);
 		eleUtil.doSendKeys(password, pwd);
 		eleUtil.doClick(loginBtn);
-		
 		return new AccountsPage(driver);
-		
-		
+	}
 	
+	public RegistrationPage navigateToRegistrationPage() {
+		eleUtil.doClick(registerLink);
+		return new RegistrationPage(driver);
 	}
 }
