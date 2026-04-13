@@ -35,7 +35,7 @@ public class RegistrationPage {
 		eleUtil = new ElementUtil(driver);
 	}
 	
-	public boolean userRegisteration(String firstName, String lastName, 
+	public boolean userRegistration(String firstName, String lastName, 
 			 String telephone, String password, String subscribe) {
 		
 		eleUtil.waitForElementVisible(this.firstName, DEFAULT_TIMEOUT).sendKeys(firstName);
