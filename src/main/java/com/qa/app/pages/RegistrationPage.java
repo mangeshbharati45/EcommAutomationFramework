@@ -14,21 +14,21 @@ public class RegistrationPage {
 	
 	private final By firstName = By.id("input-firstname");
 	private final By lastName = By.id("input-lastname");
-	private By email = By.id("input-email");
-	private By telephone = By.id("input-telephone");
-	private By password = By.id("input-password");
-	private By confirmpassword = By.id("input-confirm");
+	private final By email = By.id("input-email");
+	private final By telephone = By.id("input-telephone");
+	private final By password = By.id("input-password");
+	private final By confirmpassword = By.id("input-confirm");
 
-	private By subscribeYes = By.xpath("//label[@class='custom-control-label' and text()='Yes']");
-	private By subscribeNo = By.xpath("//label[@class='custom-control-label' and text()='No']");
+	private final By subscribeYes = By.xpath("//label[@class='custom-control-label' and text()='Yes']");
+	private final By subscribeNo = By.xpath("//label[@class='custom-control-label' and text()='No']");
 
-	private By agreeCheckBox = By.xpath("//label[@class='custom-control-label' and text()='I have read and agree to the ']");
-	private By continueButton = By.xpath("//input[@type='submit' and @value='Continue']");
+	private final By agreeCheckBox = By.xpath("//label[@class='custom-control-label' and text()='I have read and agree to the ']");
+	private final By continueButton = By.xpath("//input[@type='submit' and @value='Continue']");
 
-	private By successMessg = By.cssSelector("div#content h1");
+	private final By successMessg = By.cssSelector("div#content h1");
 
-	private By logoutLink = By.linkText("Logout");
-	private By registerLink = By.linkText("Register");
+	private final By logoutLink = By.linkText("Logout");
+	private final By registerLink = By.linkText("Register");
 	
 	public RegistrationPage(WebDriver driver) {
 		this.driver = driver;

@@ -11,29 +11,28 @@
 			<class name="com.qa.app.tests.HomePageTest" />
 		</classes>
 	</test>
-	
-	<!--<test name="Home Page Test edge">
+
+	<test name="Home Page Test edge">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.app.tests.HomePageTest" />
 		</classes>
-	</test>-->
-	
-	
+	</test>
+
 	<test name="Login Page Test chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.qa.app.tests.LoginPageTest" />
 		</classes>
 	</test>
-	
-	<!--<test name="Login Page Test edge">
+
+	<test name="Login Page Test edge">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.app.tests.LoginPageTest" />
 		</classes>
-	</test>-->
-	
+	</test>
+
 	<test name="Accounts Page Test chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -41,12 +40,12 @@
 		</classes>
 	</test>
 
-	<!--<test name="Accounts Page Test edge">
+	<test name="Accounts Page Test edge">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.app.tests.AccountsPageTest" />
 		</classes>
-	</test>-->
+	</test>
 
 	<test name="Search Page Test chrome">
 		<parameter name="browser" value="chrome" />
@@ -54,13 +53,13 @@
 			<class name="com.qa.app.tests.SearchPageTest" />
 		</classes>
 	</test>
-	
-	<!--<test name="Search Page Test edge">
+
+	<test name="Search Page Test edge">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.app.tests.SearchPageTest" />
 		</classes>
-	</test>-->
+	</test>
 
 	<test name="Register Page Test chrome">
 		<parameter name="browser" value="chrome" />
@@ -69,14 +68,13 @@
 			/>
 		</classes>
 	</test>
-	
-	<!--<test name="Register Page Test edge">
+
+	<test name="Register Page Test edge">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.app.tests.RegistrationPageTest"
 			/>
 		</classes>
-	</test>-->
-
+	</test>
 
 </suite>	

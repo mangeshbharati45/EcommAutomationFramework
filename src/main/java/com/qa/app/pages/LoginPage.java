@@ -50,8 +50,8 @@ public class LoginPage {
 		return new AccountsPage(driver);
 	}
 	
-	public RegistrationPage navigateToRegistrationPage() {
-		eleUtil.doClick(registerLink);
-		return new RegistrationPage(driver);
-	}
+//	public RegistrationPage navigateToRegistrationPage() {
+//		eleUtil.doClick(registerLink);
+//		return new RegistrationPage(driver);
+//	}
 }

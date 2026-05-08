@@ -11,8 +11,7 @@ public class RegistrationPageTest extends BaseTest {
 
 	@BeforeClass
 	public void registrationSetup() {
-		loginPage = homePage.goToLoginPage();
-		registrationPage = loginPage.navigateToRegistrationPage();
+		registrationPage = homePage.navigateToRegistrationPage();
 	}
 	
 	@DataProvider
@@ -21,6 +20,7 @@ public class RegistrationPageTest extends BaseTest {
 			{"Mangesh", "QA", "3286548765", "Pass@1234", "yes"},
 			{"visha", "qe", "3284548765", "Pass@1234", "no"},
 			{"Archana", "verma", "3281548765", "Pass@1234", "yes"},
+			{"Gargee", "bh", "5476548765", "Pass@1234", "yes"},
 		};
 	}
 	

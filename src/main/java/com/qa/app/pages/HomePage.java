@@ -15,6 +15,10 @@ public class HomePage {
 	// 1. private By locators:
 	private final By myAccount = By.xpath("(//span[contains(text(),'My account')])[2]");
 	private final By loginbtn = By.xpath("//span[contains(text(),' Login')]");
+	private final By Registerbtn = By.xpath("//span[contains(text(),' Register')]");
+	private final By search = By.name("search");
+	private final By searchIcon = By.xpath("//button[text()='Search']");
+	
 	// 2. public page constructor
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -28,6 +32,17 @@ public class HomePage {
 		return title;
 	}
 	
+	public RegistrationPage navigateToRegistrationPage() {
+		eleUtil.waitForElementVisible(myAccount, MEDIUM_DEFAULT_TIMEOUT);
+		try {
+			eleUtil.doMoveToElement(myAccount);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		eleUtil.doClick(Registerbtn);
+		return new RegistrationPage(driver);
+	}
+	
 	public LoginPage goToLoginPage() {
 		eleUtil.waitForElementVisible(myAccount, MEDIUM_DEFAULT_TIMEOUT);
 		try {
@@ -37,5 +52,11 @@ public class HomePage {
 		}
 		eleUtil.doClick(loginbtn);
 		return new LoginPage(driver);
+	}
+	
+	public SearchPage doSearch(String searchKey) {
+		eleUtil.doSendKeys(search, searchKey);
+		eleUtil.doClick(searchIcon);
+		return new SearchPage(driver);
 	}
 }
