@@ -1,12 +1,19 @@
 package com.qa.app.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.qa.app.base.BaseTest;
 import static com.qa.app.constants.AppConstants.*;
 
 public class LoginPageTest extends BaseTest {
+	
+	@BeforeClass
+	public void loginPageSetup() {
+		loginPage = homePage.goToLoginPage();
+	}
+	
 
 	@Test
 	public void loginPageTitleTest() {

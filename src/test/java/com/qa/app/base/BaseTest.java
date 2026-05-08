@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 
 import com.qa.app.factory.DriverFactory;
 import com.qa.app.pages.AccountsPage;
+import com.qa.app.pages.HomePage;
 import com.qa.app.pages.LoginPage;
 import com.qa.app.pages.RegistrationPage;
 import com.qa.app.pages.SearchPage;
@@ -20,6 +21,7 @@ public class BaseTest {
 	DriverFactory df;
 	protected Properties prop;
 	
+	protected HomePage homePage;
 	protected LoginPage loginPage;
 	protected AccountsPage accountsPage;
 	protected SearchPage searchPage;
@@ -36,7 +38,7 @@ public class BaseTest {
 		}
 		
 		driver = df.initDriver(prop);
-		loginPage = new LoginPage(driver);
+		homePage = new HomePage(driver);
 	}
 	
 	@AfterTest

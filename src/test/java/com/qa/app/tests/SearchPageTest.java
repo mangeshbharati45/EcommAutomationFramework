@@ -10,6 +10,7 @@ public class SearchPageTest extends BaseTest {
 	
 	@BeforeClass
 	public void searchSetup() {
+		loginPage = homePage.goToLoginPage();
 		accountsPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 	}

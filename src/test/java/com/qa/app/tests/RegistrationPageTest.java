@@ -11,6 +11,7 @@ public class RegistrationPageTest extends BaseTest {
 
 	@BeforeClass
 	public void registrationSetup() {
+		loginPage = homePage.goToLoginPage();
 		registrationPage = loginPage.navigateToRegistrationPage();
 	}
 	
