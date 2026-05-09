@@ -4,6 +4,10 @@
 <suite name="Ecomm App Test Regression Suite" verbose="4"
 	thread-count="1" parallel="tests">
 
+	<listeners>
+		<listener class-name="com.qa.app.listeners.TestAllureListener" />
+		<listener class-name="com.qa.app.listeners.AnnotationTransformer"/> 
+	</listeners>
 
 	<test name="Home Page Test chrome">
 		<parameter name="browser" value="chrome" />

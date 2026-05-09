@@ -1,10 +1,16 @@
 package com.qa.app.pages;
 
+import static com.qa.app.constants.AppConstants.DEFAULT_TIMEOUT;
+import static com.qa.app.constants.AppConstants.LOGIN_PAGE_FRACTION_URL;
+import static com.qa.app.constants.AppConstants.LOGIN_PAGE_TITLE;
+import static com.qa.app.constants.AppConstants.MEDIUM_DEFAULT_TIMEOUT;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static com.qa.app.constants.AppConstants.*;
 import com.qa.app.utils.ElementUtil;
+
+import io.qameta.allure.Step;
 
 public class LoginPage {
 
@@ -25,12 +31,14 @@ public class LoginPage {
 	}
 
 	// 3. public page actions/methods
+	@Step("Login Page Title")
 	public String getLoginPageTitle() {
 		String title = eleUtil.waitForTitleIs(LOGIN_PAGE_TITLE, DEFAULT_TIMEOUT);
 		System.out.println("login page title: " + title);
 		return title;
 	}
 	
+	@Step("Login Page Url")
 	public String getLoginPageURL() {
 		String url = eleUtil.waitForURLContains(LOGIN_PAGE_FRACTION_URL, DEFAULT_TIMEOUT);
 		System.out.println("login page url: " + url);
