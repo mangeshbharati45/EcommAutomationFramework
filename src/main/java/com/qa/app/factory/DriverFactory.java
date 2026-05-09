@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +16,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.qa.app.exceptions.BrowserException;
+import com.qa.app.factory.DriverFactory;
 
 public class DriverFactory {
 
@@ -23,6 +26,10 @@ public class DriverFactory {
 
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 	
+	private static final Logger log = LogManager.getLogger(DriverFactory.class);
+	
+	//warn, info, error, fatal
+	
 	/**
 	 * This method used to init the driver on the basis of given browser name
 	 * 
@@ -30,6 +37,8 @@ public class DriverFactory {
 	 * @return
 	 */
 	public WebDriver initDriver(Properties prop) {
+		
+		log.info("properties: "+ prop);
 		
 		String browserName = prop.getProperty("browser");
 		System.out.println("browser name :" + browserName);
@@ -48,7 +57,7 @@ public class DriverFactory {
 			break;
 
 		default:
-			System.out.println("Please pass the valid browser name " + browserName);
+			log.error("Please pass the valid browser name " + browserName);
 			throw new BrowserException("==INVALID BROWSER==");
 		}
 
