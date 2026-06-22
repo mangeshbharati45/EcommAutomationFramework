@@ -34,7 +34,7 @@ public class LoginPageTest extends BaseTest {
 	@Test(description = "checking login page title")
 	public void loginPageTitleTest() {
 		String actTitle = loginPage.getLoginPageTitle();
-		Assert.assertEquals(actTitle, "log");
+		Assert.assertEquals(actTitle, "Account Login");
 	}
 	
 	@Owner("Mangesh")

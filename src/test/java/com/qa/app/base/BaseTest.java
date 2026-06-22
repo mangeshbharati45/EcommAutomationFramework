@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.qa.app.factory.DriverFactory;
@@ -27,18 +28,19 @@ public class BaseTest {
 	protected SearchPage searchPage;
 	protected RegistrationPage registrationPage;
 	
-	@Parameters({"browser"})
 	@BeforeTest
-	public void setup(String browserName) {
-		df = new DriverFactory();
-		prop = df.initProp();
-		
-		if(browserName !=null) {
-			prop.setProperty("browser", browserName);
-		}
-		
-		driver = df.initDriver(prop);
-		homePage = new HomePage(driver);
+	@Parameters({"browser"})
+	public void setup(@Optional String browserName) {
+
+	    df = new DriverFactory();
+	    prop = df.initProp();
+
+	    if(browserName != null && !browserName.isEmpty()) {
+	        prop.setProperty("browser", browserName);
+	    }
+
+	    driver = df.initDriver(prop);
+	    homePage = new HomePage(driver);
 	}
 	
 	@AfterTest
